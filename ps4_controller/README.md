@@ -12,16 +12,16 @@ rosrun robot_upstart install ps4_controller/launch/single_mir_ps4_drive.launch -
 
 ## Create a new file named “local.rules” in /etc/udev/rules.d/.
 
-'''
+```
 cd /etc/udev/rules.d/
 sudo touch local.rules
-'''
+```
 
 ## Test:
 
 Connect ps4 by pressing both shoulder buttons at the same time and releasing at the same time. Blue light will be visible on the controller.
 
-'''
+```
 sudo systemctl daemon-reload
 
 sudo systemctl start start_ps4.service
@@ -33,7 +33,7 @@ rostopic echo  rostopic echo /ps4_input
 sudo systemctl stop start_ps4.service
 
 rostopic echo  rostopic echo /ps4_input
-'''
+```
 
 ## Documentation:
 
